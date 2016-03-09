@@ -1,0 +1,13 @@
+<div>
+  <div class="range-items">
+    <div ng-repeat="item in items"
+         class="range-item"
+         ng-class="{ 'range-selected-item' : range.value === $index }"
+         ng-click="range.value = $index;">
+      {{::item}}
+    </div>
+  </div>
+  <div class="range-input">
+    <input type="range" step="1" ng-model="range.value"></input>
+  </div>
+</div>
