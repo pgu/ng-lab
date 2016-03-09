@@ -1,6 +1,6 @@
 input[type=range] {
   -webkit-appearance: none;
-  -moz-apperance: none;
+  -moz-appearance: none;
   border-radius: 6px;
   height: 6px;
   cursor: pointer;
@@ -31,6 +31,14 @@ input[type=range]::-webkit-slider-thumb {
 
 input[type=range]::-moz-range-thumb {
   -moz-appearance: none !important;
+  background-color: #89B76C;
+  border: none;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+}
+
+input[type=range]::-ms-thumb {
   background-color: #89B76C;
   border: none;
   height: 13px;
