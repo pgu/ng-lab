@@ -1,8 +1,8 @@
 input[type=range] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  border-radius: 6px;
-  height: 6px;
+  border-radius: .5em;
+  height: .5em;
   cursor: pointer;
 }
 
@@ -24,8 +24,8 @@ input[type=range]::-moz-focus-outer {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   background-color: #89B76C;
-  height: 13px;
-  width: 13px;
+  height: 1em;
+  width: 1em;
   border-radius: 50%;
 }
 
@@ -33,23 +33,23 @@ input[type=range]::-moz-range-thumb {
   -moz-appearance: none !important;
   background-color: #89B76C;
   border: none;
-  height: 13px;
-  width: 13px;
+  height: 1em;
+  width: 1em;
   border-radius: 50%;
 }
 
 input[type=range]::-ms-thumb {
   background-color: #89B76C;
   border: none;
-  height: 13px;
-  width: 13px;
+  height: 1em;
+  width: 1em;
   border-radius: 50%;
 }
 
 /*blue #284249*/
 
 .range-items {
-  height: 35px;
+  height: 2.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -60,11 +60,11 @@ input[type=range]::-ms-thumb {
   text-align: center;
   color: #284249;
   background-color: #fff;
-  border-radius: 3px;
-  padding-top: 2px;
-  padding-bottom: 1px;
+  border-radius: .25em;
+  padding-top: .15em;
+  padding-bottom: .05em;
   cursor: pointer;
-  width: 60px;
+  width: 4.5em;
   font-weight: bold;
 }
 
@@ -85,11 +85,11 @@ input[type=range]::-ms-thumb {
   position: absolute;
   pointer-events: none;
   border-top-color: #284249;
-  border-width: 5px;
-  margin-left: -5px;
+  border-width: .3em;
+  margin-left: -0.25em;
 }
 
 .range-input {
-  padding-left: 24px;
-  padding-right: 23px;
+  padding-left: 1.8em;
+  padding-right: 1.7em;
 }
