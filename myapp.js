@@ -98,7 +98,7 @@
       };
     })
 
-    .directive('myRange', function ($timeout, $window) {
+    .directive('myRange', function ($window) {
       return {
         restrict: 'E',
         scope: {
@@ -129,9 +129,7 @@
 
           $scope.$watch('range.value', function (newValue, oldValue) {
             if (newValue !== oldValue) {
-              console.info('94', 'do something', newValue, oldValue);
               updateRangeSkin(newValue, min, max);
-              $timeout(_.noop);
             }
           });
 
