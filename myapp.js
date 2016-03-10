@@ -131,8 +131,11 @@
             if (newValue !== oldValue) {
               console.info('94', 'do something', newValue, oldValue);
               updateRangeSkin(newValue, min, max);
+              $timeout(_.noop);
             }
           });
+
+          $scope.getSelectedStyle = getSelectedStyle;
 
           function updateRangeSkin (value, min, max) {
             var percent = (value - min) * 100 / (max - min);
@@ -145,6 +148,10 @@
 
             rangeElement.css('background-image', '-moz-linear-gradient(left center, {green} 0%, {green} {percent}%, {gray} {percent}%, {gray} 100%)'
               .format(values));
+          }
+
+          function getSelectedStyle (index) {
+            return _.parseInt($scope.range.value) === index ? 'range-selected-item' : '';
           }
 
         },

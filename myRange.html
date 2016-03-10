@@ -2,7 +2,7 @@
   <div class="range-items">
     <div ng-repeat="item in items"
          class="range-item"
-         ng-class="{ 'range-selected-item' : range.value === $index }"
+         ng-class="getSelectedStyle($index)"
          ng-click="range.value = $index;">
       {{::item}}
     </div>
