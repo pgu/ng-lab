@@ -63,6 +63,48 @@
       };
     })
 
+    .directive('d3', function () {
+      return {
+        restrict: 'E',
+        scope: {},
+        template: '<div>d3 <d31></d31></div>',
+        link: function ($scope) {
+          console.log('d3:link', performance.now());
+        },
+        controller: function ($scope) {
+          console.log('d3:controller', performance.now());
+        }
+      };
+    })
+    .directive('d31', function () {
+      return {
+        restrict: 'E',
+        scope: {},
+        template: '<div>d31 <d32></d32></div>',
+        link: function ($scope) {
+          console.log('d31:link', performance.now());
+        },
+        controller: function ($scope) {
+          console.log('d31:controller', performance.now());
+        }
+      };
+    })
+    .directive('d32', function () {
+      return {
+        require: '^d3',
+        restrict: 'E',
+        scope: {},
+        template: '<div>d32</div>',
+        link: function ($scope) {
+          console.log('d32:link', performance.now());
+        },
+        controller: function ($scope) {
+          console.log('d32:controller', performance.now());
+        }
+      };
+    })
+
+
     .directive('clientRange', function () {
       return {
         restrict: 'E',
